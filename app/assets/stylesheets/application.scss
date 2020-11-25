@@ -1,0 +1,62 @@
+@import "reset";
+
+.header {
+  box-sizing: border-box;
+  width: 100%;
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1024px;
+    height: 60px;
+    padding: 0 0.8em;
+    margin: 0 auto;
+    font-size: 1.2em;
+  }
+  .header-nav {
+    display: flex;
+    align-items: center;
+    .header-nav-item {
+      display: flex;
+      align-items: center;
+      margin-left: 16px;
+      .header-button {
+        box-sizing: border-box;
+        display: inline-block;
+        padding: 0.5em 1.2em;
+        font-size: 12px;
+        text-decoration: none;
+        cursor: pointer;
+        user-select: none;
+      }
+      .header-mypage {
+        font-weight: bold;
+        color: #fff;
+        background: #00b5ad;
+        border: 1px #00b5ad solid;
+        border-radius: 3px;
+      }
+      .header-login .header-logout .header-signup {
+        color: #999;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-mypage {
+    display: none;
+  }
+}
+
+.footer {
+  width: 100%;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  padding: 10px 0;
+  .copyright {
+    font-size: 15px;
+  }
+}
