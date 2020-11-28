@@ -1,0 +1,7 @@
+<h2 class="title">レビューの詳細</h2>
+  <%= @review.item %>
+  <%= simple_format @review.review %>
+  <%= @review.created_at %>
+
+<%= link_to '編集', edit_review_path, class: 'btn'%>
+<%= link_to '削除', "/reviews/#{@review.id}", method: :delete, class: 'btn'%>
