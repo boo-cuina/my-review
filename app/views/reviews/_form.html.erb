@@ -1,0 +1,12 @@
+<%= form_with model: review, local: true do |f| %>
+  <div class="item-form" >
+    <%= f.label :name, "アイテム名："%>
+    <%= f.text_field :item, class: 'form-field'%>
+  </div>
+  <div class="item-form" >
+    <%= f.label :item, "レビュー："%>
+    <%= f.text_area :review, class: 'form-field' %>
+  </div>
+
+  <%= f.submit "送信" %>
+<% end %>
