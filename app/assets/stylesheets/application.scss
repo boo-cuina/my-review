@@ -1,8 +1,10 @@
 @import "reset";
+@import "config/colors";
 
 .header {
   box-sizing: border-box;
   width: 100%;
+  background-color: $base-color;
   .header-inner {
     display: flex;
     align-items: center;
@@ -12,32 +14,36 @@
     padding: 0 0.8em;
     margin: 0 auto;
     font-size: 1.2em;
-  }
-  .header-nav {
-    display: flex;
-    align-items: center;
-    .header-nav-item {
+    .header-logo {
+      width: 100px;
+    }
+    .header-nav {
       display: flex;
       align-items: center;
-      margin-left: 16px;
-      .header-button {
-        box-sizing: border-box;
-        display: inline-block;
-        padding: 0.5em 1.2em;
-        font-size: 12px;
-        text-decoration: none;
-        cursor: pointer;
-        user-select: none;
-      }
-      .header-mypage {
-        font-weight: bold;
-        color: #fff;
-        background: #00b5ad;
-        border: 1px #00b5ad solid;
-        border-radius: 3px;
-      }
-      .header-login .header-logout .header-signup {
-        color: #999;
+      .header-nav-item {
+        display: flex;
+        align-items: center;
+        margin-left: 16px;
+        .header-button {
+          box-sizing: border-box;
+          display: inline-block;
+          padding: 0.5em 1.2em;
+          font-size: 12px;
+          text-decoration: none;
+          cursor: pointer;
+          user-select: none;
+        }
+        .header-mypage {
+          font-weight: bold;
+          color: #fff;
+          background: $main-color;
+          border: 1px $main-color solid;
+          border-radius: 3px;
+        }
+        .header-login, .header-logout, .header-signup {
+          color: #999;
+          // text-decoration: none;
+        }
       }
     }
   }
@@ -51,12 +57,22 @@
 
 .footer {
   width: 100%;
-  background-color: aquamarine;
+  background-color: $main-color;
   display: flex;
   justify-content: center;
   margin: 10px 0;
   padding: 10px 0;
-  .copyright {
-    font-size: 15px;
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    .footer-logo {
+      width: 200px;
+      display: block;
+      margin: 10px auto;
+    }
+    .copyright {
+      font-size: 15px;
+      color: $base-color;
+    }
   }
 }
